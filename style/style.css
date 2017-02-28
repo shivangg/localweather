@@ -1,0 +1,119 @@
+body{
+  background-color: #ddd;
+  color: #2d2d22;
+}
+
+.region {
+  padding: 12px;
+  text-align:  right;
+}
+
+.quote{
+/*   visibility: hidden; */
+  
+  background: #fffff1;
+  border-radius:  3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  padding-top: 15px;
+  
+  transition: box-shadow 0.5s;
+}
+
+.margin{
+  margin-bottom: 40px;
+}
+
+
+
+/*////////////////////////////////////////////////////////////////*/
+
+.social{
+	background-color: white;
+    width: 50px;
+}
+
+svg path {
+	fill: white;
+}
+
+.social a:hover{
+	transform: scale(1.25);
+	/*background-color: white;*/
+  	/*transition: background-color .5s, transform .5s ease-out*/
+}
+
+
+.mail a:hover svg path, .linkedin a:hover svg path, .facebook a:hover svg path, .youtube a:hover svg path{
+	fill: #fff;
+}
+
+.github a:hover svg path{
+	fill: #000;
+}
+
+.github svg:hover{
+	background: #fff;
+}
+
+.youtube svg:hover{
+	background: #e62117;
+}
+
+.facebook svg:hover{
+	background: #3b5998;
+}
+
+.linkedin svg:hover{
+	background: #0077b5;
+}
+
+
+.mail svg:hover{
+	background-color: #db4437;
+}
+
+.stackoverflow a:hover svg path{
+	fill: #f48024;
+}
+
+.stackoverflow svg:hover{
+	background: #fff;
+}
+
+
+.slideanim {
+	visibility:hidden;
+}
+
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
