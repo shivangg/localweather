@@ -8,6 +8,10 @@ body{
   text-align:  right;
 }
 
+.temp {
+   cursor: pointer;
+}
+
 .quote{
 /*   visibility: hidden; */
   

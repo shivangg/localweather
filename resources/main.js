@@ -21,17 +21,15 @@ $(function () {
 	   
 	    
 	    success: function( a ) {
-	        // console.log( a );
+	        
 	        loc = a;
 	        var climateLocal = "";
-	        // a = JSON.parse(a);
-
-
+	        
 	        var climateReq = "http://api.openweathermap.org/data/2.5/weather?q=" + loc.city + "&units=metric&APPID=061f24cf3cde2f60644a8240302983f2";
 
 			$.getJSON(climateReq, function(w){
 				climateLocal = w.weather[0].main;
-				console.log(climateLocal);
+				// console.log(climateLocal);
 
 				var str = "<h2>" + climateLocal + "</h2>"  ;
 				var reg = a.city + ", " + a.region ;
@@ -55,7 +53,6 @@ $(function () {
 				$(".region").append(reg);
 				$('.wind').append(visi);
 				$('.temp').append(temp);
-				// $('.tempF').hide(tempF);
 				$('.hum').append(hum);	
 				$('.visible').append(visi);
 						
@@ -66,10 +63,8 @@ $(function () {
 				$('.visible').show(6000);
 				$('.region').show(6000);
 
-				// $(".temp")[0].innerText = "Temperature: " ; 
-
 				$(".temp").click(function (a) {
-					console.log(a.currentTarget.innerText);
+					// console.log(a.currentTarget.innerText);
 
 					if (a.currentTarget.innerText.indexOf('sius') !== -1){
 						a.currentTarget.innerText = "Temperature: " + tempF + " Fahrenheit";
