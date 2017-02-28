@@ -6,12 +6,15 @@ var loc = "";
 
 $(function () {
 
+	$('.intro').hide();
 	$('.region').hide();
 	$('.weather').hide();
 	$('.wind').hide();
 	$('.temp').hide();
 	$('.hum').hide();
 	$('.visible').hide();
+
+	// $('.loaderdiv').show();
 
 	$.ajax({
 	    // Tell jQuery we're expecting JSONP
@@ -21,7 +24,7 @@ $(function () {
 	   
 	    
 	    success: function( a ) {
-	        
+	       	
 	        loc = a;
 	        var climateLocal = "";
 	        
@@ -38,16 +41,22 @@ $(function () {
 				var tempF = Math.round(((parseInt(w.main.temp) * 9)/5 + 32) * 100) / 100; 
 				var hum = w.main.humidity + " %" ;
 				var wind = w.wind.speed + " meter per second";
+				var id = w.weather[0].icon;
+				var imageUrl = "http://openweathermap.org/img/w/" + id + ".png";
+				var vec = "<img class='img img-responsive img-center' src="+ imageUrl +" />"; 
 
-				$('.region').hide();
-				$('.weather').hide();
-				$('.wind').hide();
-				$('.temp').hide();
-				// $('.tempF').hide();
-				$('.hum').hide();
-				$('.visible').hide();
+				// $('.region').hide();
+				// $('.weather').hide();
+				// $('.wind').hide();
+				// $('.temp').hide();
+				// $('.hum').hide();
+				// $('.visible').hide();
+				// $('.vector').hide();
 
+				// $('.loaderdiv').hide();
+				// $('.text-center').show(750);
 
+				$('body').css('background-image', 'none');
 
 				$(".weather").append(str);
 				$(".region").append(reg);
@@ -55,13 +64,16 @@ $(function () {
 				$('.temp').append(temp);
 				$('.hum').append(hum);	
 				$('.visible').append(visi);
-						
+				$('.vector').append(vec);
+
+				$('.intro').show();
 				$('.weather').show(1000);
+				$('.vector').show(2500);
 				$('.wind').show(3000);
-				$('.temp').show(4000);
-				$('.hum').show(5000);
-				$('.visible').show(6000);
-				$('.region').show(6000);
+				$('.hum').show(4000);
+				$('.visible').show(4300);
+				$('.temp').show(5000);
+				$('.region').show(1000);
 
 				$(".temp").click(function (a) {
 					// console.log(a.currentTarget.innerText);
