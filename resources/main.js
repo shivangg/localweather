@@ -1,7 +1,3 @@
-// $.getJSON("http://ipinfo.io/json?callback=JSON_CALLBACK", function(city){
-// 		console.log(city.responseText);
-// 		});
-
 var loc = "";
 
 $(function () {
@@ -45,16 +41,6 @@ $(function () {
 				var imageUrl = "http://openweathermap.org/img/w/" + id + ".png";
 				var vec = "<img class='img img-responsive img-center' src="+ imageUrl +" />"; 
 
-				// $('.region').hide();
-				// $('.weather').hide();
-				// $('.wind').hide();
-				// $('.temp').hide();
-				// $('.hum').hide();
-				// $('.visible').hide();
-				// $('.vector').hide();
-
-				// $('.loaderdiv').hide();
-				// $('.text-center').show(750);
 
 				$('body').css('background-image', 'none');
 
