@@ -3,7 +3,7 @@ body{
   color: #2d2d22;
   width:100%;
   height:100%; 
-  background: url(resources/loader.gif) no-repeat center center fixed;
+  background: url(../resources/loader.gif) no-repeat center center fixed;
 }
 
 .slide img { height: 100vh;width: 100vw; }
